@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+}
+
+h2{
+	text-align: left;
+}
+
+body {
+	border: 5px solid black;
+	margin: 50px;
+	padding:50px ;
+}
+
+
+button {
+	display: inline-block;
+    border: 1px solid navy;
+    background-color: white;
+    width:15%;
+    font-size: 16px;
+    align-items: center;
+    margin: auto;
+}
+
+button:hover {
+    background-color: blue; 
+    color: white;
+}
