@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		    <link rel="stylesheet" href="styles.css">
-		    <title>Contact</title>
-	<body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Contact Information</title>
+</head>
+
+<body>
 	<header>
 		<h1>Lucy Chen</h1>
-		<div class = "navigation">
-			<button type="button" onclick="location.href='index.html'">Home</button> 
-			<button type="button" onclick="location.href='Education.html'">Education</button>
-			<button type="button" onclick="location.href='Resume.html'">Resume</button>
-			<button type="button" onclick="location.href='Pictures.html'">Pictures</button>
-			<button type="button" onclick="location.href='Contact.html'">Contact</button>
-		</div>
-		</header>
-    <h2>Contact</h2>
-    <p class="contact-info"> Pitt Email: 
-        <a href="mailto:yic76@pitt.edu">yic76@pitt</a>
-    </p>
-    <p class="contact-info"> Personal Email: 
-            <a href="mailto:lucychen1996@gmail.com">lucychen1996@gmail.com</a>
-        </p>
+		<svg height="30" width="600">
+			<line x1="0" y1="0" x2="200" y2="0" stroke="red" stroke-width="3" />
+			<line x1="400" y1="0" x2="600" y2="0" stroke="red" stroke-width="3" />
+		</svg>
+		<nav>
+			<button class="tabs"  onclick="location.href='Index.html'">Home</button> 
+			<button class="tabs"  onclick="location.href='Education.html'">Education</button>
+			<button class="tabs"  onclick="location.href='Coursework.html'">Coursework</button>
+			<button class="tabs"  onclick="location.href='Resume.html'">Resume</button>
+			<button class="tabs"  onclick="location.href='Contact.html'">Contact</button>
+		</nav>
+	</header>
 
+	<main>
+	<h2>Contact Information</h2>
+
+	<div class="contact-info">
+    	<p> Pitt Email: 
+        	<a href="mailto:yic76@pitt.edu">yic76@pitt</a>
+    	</p>
+		<p>Phone Number: 917-698-2488</p>
+	</div>
+	</main>
 	</body>
 </html>

@@ -1,0 +1,75 @@
+header {
+    text-align: center;
+}
+
+body {
+    margin: 5%;
+}
+svg {
+    white-space: nowrap;
+}
+.tabs {
+	display: inline-block;
+    border: 1px solid navy;
+    background-color:lightcyan;
+    width:15%;
+    font-size: 14px;
+    margin: auto;
+    white-space: nowrap;
+}
+.tabs:hover {
+    background-color: teal; 
+    color: white;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 15%;
+    text-decoration:navy underline;
+
+}
+
+.me {
+    width: 30%;
+    height: 30%;
+    float: left;
+    margin-left: 15%;
+}
+
+.summary {
+  
+    margin-right: 15%;
+    margin-left: 50%;
+}
+
+.aboutme {
+    text-align: justify;
+    display: block;
+}
+
+.undergraduate, .graduate, .courselist {
+    margin-left: 20%;
+}
+
+.pittlogo {
+    width: 20%;
+    height: 20%;
+    float: right;
+    margin-right: 15%;
+}
+
+.resume {
+    margin-left: 20%;
+    width: 100px;
+    height: 150px;
+}
+
+.resume:hover, .prev:hover, .next:hover {
+        
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.contact-info {
+    text-align: left;
+    padding-left: 15%;
+}
