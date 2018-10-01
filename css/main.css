@@ -14,7 +14,9 @@ h2 {
     text-align: left;;
     text-decoration:navy underline;
 }
-
+.bio {
+    text-align: justify;
+}
 .nodisplay {
     display: none;
   }
