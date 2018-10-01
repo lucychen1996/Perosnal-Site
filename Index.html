@@ -1,70 +1,112 @@
-<!--Assignment1: Personalsite-->
-
-
+<!--Assignment2-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<title>Lucy Chen</title>
 </head>
 
 <body>
-	<header>
-		<h1>Lucy Chen</h1>
-		<svg height="30" width="600">
-			<line x1="0" y1="0" x2="200" y2="0" stroke="red" stroke-width="3" />
-			<line x1="400" y1="0" x2="600" y2="0" stroke="red" stroke-width="3" />
-		</svg>
-		<nav> 
-			<button class="tabs"  onclick="location.href='Index.html'">Home</button> 
-			<button class="tabs"  onclick="location.href='Education.html'">Education</button>
-			<button class="tabs"  onclick="location.href='Coursework.html'">Coursework</button>
-			<button class="tabs"  onclick="location.href='Resume.html'">Resume</button>
-			<button class="tabs"  onclick="location.href='Contact.html'">Contact</button>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-right">
+			<p id="date"></p> <!--date-->
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="my-name">Lucy Chen</h1> <!--head-->
+				<svg height="20" width="100%">
+					<line x1="40%" y1="0" x2="60%" y2="0" stroke="red" stroke-width="3" />
+				</svg>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<!--button for navigation to other page-->
+				<div class="btn-group btn-group-justified"> 
+					<a class="btn btn-primary" id="button" href="Index.html">Home</a>
+					<a class="btn btn-primary" id="button" href="Education.html">Education</a>
+					<a class="btn btn-primary" id="button" href="Coursework.html">Coursework</a>
+					<a class="btn btn-primary" id="button" href="Resume.html">Resume</a>
+					<a class="btn btn-primary" id="button" href="Contact.html">Contact</a>
+				</div>
+			</div>
+		</div>	
+		<div class="row ">
+			<div class="col-md-6">
+				<h2 class="text-left">About Me</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">	
+				<!--pictures for picture slideshow-->
+				<div class="picturebtn">
+						<button class="prev" onclick="change(-1)">&#10094;</button>
+						<button class="next" onclick="change(1)">&#10095;</button>
+					</div>
+				<div class="pictureslide">
+					<img src="images/me.JPG" alt="me" class="img-responsive" >
+				</div>
+				<div class="pictureslide">
+					<img src="images/Vegas1.jpg" alt="Las Vegas" class="img-responsive" >
+				</div>
+				<div class="pictureslide">
+					<img src="images/niagarafalls1.JPG" alt="Niagara Falls" class="img-responsive">
+				</div>
+				<div class="pictureslide">
+					<img src="images/nyc1.JPG" alt="New York City" class="img-responsive">
+				</div>
+				<div class="pictureslide">
+					<img src="images/shanghai1.JPG" alt="me" class="img-responsive">
+				</div>
+				<div class="pictureslide">
+					<img src="images/suzhou.JPG" alt="Suzhou, China" class="img-responsive">
+				</div>
+				<div class="pictureslide">
+					<img src="images/taiwan1.JPG" alt="Taipei, Taiwan" class="img-responsive">
+				</div>
+				<div class="pictureslide">
+					<img src="images/toronto1.JPG" alt="Toronto" class="img-responsive">
+				</div>
+				
+			</div>			
+			<div class="col-md-6">
+				<!--biography-->
+				<h4>Who Am I?</h4>		
+				<p>I am a first-year graduate student in the Master of Science in Infomation Sciences program at the University of Pitsburgh. I graduated from the Univerity of Pittsburgh with a bachelors degree in Chemistry. During my undergraduate years, I was part of a nanotechnology chemistry research lab that dealt with using machine learning to predict chemical components of a substance. Ever since that research, I became more interested in data analytics field and and hope that I can merge these two fields of study in my future career. 
+				</p>
+				<div id="funfacts" class="nodisplay"> Fun Facts About Me:
+					<ul>
+						<li>I was born in China, but immigrated to the United States when I was 5 years old.</li>	
+						<li>I've lived in New York City for 6 years before moving to the surburbs right outside of Philadephia where my family
+							currently resides</li>
+						<li>I play the piano and the flute.</li>
+						<li>My hobbies include dancing and ice skating.</li>
+						<li> I love traveling and eating different kinds of food. Check out my pictures from my travels.</li>
+					</ul>	
+				</div>
+				<!--button for showing fun fact-->
+				<button id="showFacts" type="button" class="btn btn-default"  onclick="showFacts()">Click for fun facts</button>
+			</div>
+		</div>
+		<!--breadcrumb navigation-->
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item" active aria-current="page">Home</li>
+				<li class="breadcrumb-item"><a href="Education.html">Education</a></li>
+				<li class="breadcrumb-item"><a href="Coursework.html">Coursework</a></li>
+				<li class="breadcrumb-item"><a href="Resume.html">Resume</a></li>
+				<li class="breadcrumb-item"><a href="Contact.html">Contact</a></li>
+			</ol>
 		</nav>
-	</header>
-
-	<h2>About Me</h2>
-		<figure>
-			<img class="me" src="images/me.JPG" alt="me">
-		</figure>
-		<div class="about-me-summary">
-		<button class="prev" onclick="change(-1)">&#10094;</button>
-		<p class="aboutme">I am a first-year graduate student in the Master of Science in Infomation Sciences program at the University of Pitsburgh. I graduated from the Univerity of Pittsburgh with a bachelors degree in Chemistry. During my undergraduate years, I was part of a nanotechnology chemmistry research lab that dealt with using machine learning to predict chemical components of a substance. Ever since that research, I became more interested in data analytics field and and hope that I can merge these two fields of study in my future career. 
-		</p>
-		<p class="aboutme">
-			Fun Facts About Me:
-			I was born in China, but immigrated to the United States when I was 5 years old.
-			I've lived in New York City for 6 years before moving to the surburbs right outside of Philadephia where my family currently resides.I play the piano and the flute. My hobbies include dancing and ice skating. I love traveling and eating different kinds of food. Check out my pictures from my travels. 
-		</p>
-		<button class="next" onclick="change(+1)">&#10095;</button>
-	</div>
+	</div>	
 	
-	<script> //based off of from W3schools
-		var page = 1;
-		current(page);
-			
-		//prev/next control
-		function change(n) {
-			current(page +=n);
-		}
-	
-		function current(n) {
-			var i;
-			var x = document.getElementsByClassName("aboutme");
-			if (n > x.length) {
-				page = 1
-				} 
-			if (n < 1) {
-				page = x.length};
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none"; 
-			}
-			x[page-1].style.display = "block"; 
-			//click to new page
-		}
-	</script>
+	<script type="text/javascript" src="scripts/valid.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -3,35 +3,104 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Contact Information</title>
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<title>Contact Information</title>
 </head>
 
 <body>
-	<header>
-		<h1>Lucy Chen</h1>
-		<svg height="30" width="600">
-			<line x1="0" y1="0" x2="200" y2="0" stroke="red" stroke-width="3" />
-			<line x1="400" y1="0" x2="600" y2="0" stroke="red" stroke-width="3" />
-		</svg>
-		<nav>
-			<button class="tabs"  onclick="location.href='Index.html'">Home</button> 
-			<button class="tabs"  onclick="location.href='Education.html'">Education</button>
-			<button class="tabs"  onclick="location.href='Coursework.html'">Coursework</button>
-			<button class="tabs"  onclick="location.href='Resume.html'">Resume</button>
-			<button class="tabs"  onclick="location.href='Contact.html'">Contact</button>
-		</nav>
-	</header>
-
-	<main>
-	<h2>Contact Information</h2>
-
-	<div class="contact-info">
-    	<p> Pitt Email: 
-        	<a href="mailto:yic76@pitt.edu">yic76@pitt</a>
-    	</p>
-		<p>Phone Number: 917-698-2488</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-right">
+				<p id="date"></p>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="my-name" >Lucy Chen</h1>
+				<svg height="20" width="100%">
+					<line x1="40%" y1="0" x2="60%" y2="0" stroke="red" stroke-width="3" />
+					</svg>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="btn-group btn-group-justified">
+					<a class="btn btn-primary" id="button" href="Index.html">Home</a>
+					<a class="btn btn-primary" id="button" href="Education.html">Education</a>
+					<a class="btn btn-primary" id="button" href="Coursework.html">Coursework</a>
+					<a class="btn btn-primary" id="button" href="Resume.html">Resume</a>
+					<a class="btn btn-primary" id="button" href="Contact.html">Contact</a>
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-md-6">
+				<h2>Contact Information</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<!--email button-->
+				<a id="email" onclick="showEmail()" class="btn btn-info btn-md btn-block">
+					<span class="glyphicon glyphicon-envelope"></span> Email 
+				</a>
+				<!--phone button-->
+				<a id="number" onclick="showNumber()" class="btn btn-info btn-md btn-block">
+				<span class="glyphicon glyphicon-phone-alt"></span> Phone 
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div id="messagebox">
+					<!--Send a message form-->
+					<form name="sendmessage">
+						<div class=" col-md-6 form-group">
+							<label>Name:</label>
+							<input type="text" class="form-control" name="name" required> 
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Email:</label>
+							<input type="email" class="form-control" name="email" required> 
+						</div>
+						<div class="col-md-12 form-group">
+							<label>Message:</label>
+							<textarea type="text" class="form-control" name="message" rows ="5" required></textarea>
+						</div>
+					</form>	
+					<!--submit button-->
+					<button type="button" id ="submitbtn"  onclick="submit_message()" class="btn btn-info btn-md btn-block">
+						<span class="glyphicon glyphicon-comment" ></span> Send Message Now 
+					</button>
+				</div>
+			</div> 
+			<div class="col-md-6">
+				<!--Confirmation message box-->
+				<div class="nodisplay" id="confirmationmessage">
+					<label>Confirmation:</label>
+					<textarea type="text" class="form-control" id="confirmation" rows="10" readonly> </textarea>
+					<div class="alert alert-success">
+						<strong>Success!</strong> Message successfully sent.
+					</div>
+				</div>
+			</div>
+		</div> 
+		<!--breadcrumb navigation-->
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="Index.html">Home</a></li> 
+				<li class="breadcrumb-item"><a href="Education.html">Education</a></li>
+				<li class="breadcrumb-item"><a href="Coursework.html">Coursework</a></li>
+				<li class="breadcrumb-item"><a href="Resume.html">Resume</a></li>
+				<li class="breadcrumb-item" active aria-current="page">Contact</li>
+			</ol>
+		</nav> 	
 	</div>
-	</main>
-	</body>
+	<script type="text/javascript" src="scripts/valid.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+</body>
 </html>
